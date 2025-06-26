@@ -1,0 +1,44 @@
+# Dependencias de Node
+node_modules/
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Entornos y variables de configuración
+.env
+.env.*.local
+
+# Directorios de salida de compilación / bundling
+dist/
+build/
+
+# Cobertura de tests
+coverage/
+.nyc_output/
+
+# Archivos de PID
+pids/
+*.pid
+*.pid.lock
+
+# Directorios de instrumented libs
+lib-cov/
+
+# Archivos de pruebas temporales
+test-results/
+
+# Configuración de editor/IDE
+.vscode/
+.idea/
+
+# Sombra de macOS y otros
+.DS_Store
+Thumbs.db
+
+# Archivos de tipo lock de procesos
+*.lock
