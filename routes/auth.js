@@ -4,13 +4,14 @@
  */
 
 import { Router } from "express";
+import { crearUsuario, loginUsuario, revalidarToken } from '../controllers/auth.js';
 const router = Router();
 
 
-router.get('/', (req, res) => {
-    res.json({
-        ok: true
-    })
-});
+router.post('/new', crearUsuario);
+
+router.post('/', loginUsuario);
+
+router.get('/renew', revalidarToken);
 
 export default router;
