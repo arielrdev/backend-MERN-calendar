@@ -2,10 +2,13 @@ import express from 'express';
 import colors from 'colors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
+import { dbConection } from './database/config.js';
 dotenv.config();
 
 
 const app = express();
+
+dbConection();
 
 const port = process.env.PORT
 
