@@ -1,10 +1,13 @@
 import { response } from "express";
 import Evento from "../models/Evento.js";
 
-export const getEventos = ( req, res = response ) => {
+export const getEventos = async ( req, res = response ) => {
+    const eventos = await Evento.find()
+                                .populate('user', 'name');
+
     res.json({
         ok: true,
-        msg: 'getEventos'
+        eventos
     })
 }
 
